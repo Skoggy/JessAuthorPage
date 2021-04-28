@@ -6,8 +6,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <p>Hi There this is the main page</p>
-
+  <div>
+    <p>Hi There this is the main page</p>
+  </div>
 )
 
 
