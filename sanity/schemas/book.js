@@ -7,7 +7,7 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'name',
+            name: 'title',
             title: 'Book Title',
             type: 'string',
             description: 'Name of the Book'
