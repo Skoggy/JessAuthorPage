@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 export default function BookPage({ data }) {
     const { book } = data;
-
+    console.log(book)
     return (
         <div>
             <p>{book.title}</p>
