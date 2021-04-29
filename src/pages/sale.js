@@ -8,6 +8,7 @@ export default function BooksPage({ data }) {
 
     return (
         <div>
+            <p>This is the page that will list all of the books</p>
             <div>
                 <p>{books.map(book => book.title)}</p>
             </div>
