@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import Book from '../components/Book';
+
+
 
 export default function BooksPage({ data }) {
     const books = data.allSanityBook.nodes
@@ -10,7 +13,14 @@ export default function BooksPage({ data }) {
         <div>
             <p>This is the page that will list all of the books</p>
             <div>
-                <p>{books.map(book => book.title)}</p>
+                {books.map(book => (
+                    <Book
+                        key={book.id}
+                        title={book.title}
+                        description={book.description}
+                    // linkToBuy={book.}
+                    ></Book>
+                ))}
             </div>
         </div>
 
