@@ -13,23 +13,15 @@ export default function indexPage({ data }) {
 
   return (
     <div>
-      {/* {articles.map(thing => <p>{thing.firstParagraph}</p>)} */}
-      {/* <Article
-        firstParagraph={articles[0].firstParagraph}
-        headline={articles[0].headline} />
-      <Article
-        firstParagraph={articles[1].firstParagraph}
-        headline={articles[1].headline} /> */}
-
       {articles.map(article => (
         <Article
-          key={article._id}
+          key={article.id}
+          link={article.link}
           firstParagraph={article.firstParagraph}
           headline={article.headline} />)
       )}
     </div >
   )
-
 }
 
 
