@@ -18,13 +18,11 @@ a.social:hover {
 
 `
 
-
 export default function SocialLink() {
     return (
         <>
-            <h2>Social Links</h2>
-            <GridStyle>
 
+            <GridStyle>
                 <a
                     href='https://www.facebook.com/mumstrife/'
                     className='facebook social'
