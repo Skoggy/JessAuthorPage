@@ -9,15 +9,16 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function indexPage({ data }) {
   const articles = data.allSanityArticle.nodes
-  articles.forEach(article => console.log(article.image))
-
+  const articleImages = articles.forEach(article => article.image.asset.gatsbyImageData.images.fallback.src)
+  console.log(articleImages)
 
   return (
     <div>
       {articles.map(article => (
         <div key={article.id}>
           <h1>{article.headline}</h1>
-          <GatsbyImage image={article.image} alt={article.headline} />
+          <GatsbyImage src={articleImages} alt={article.headline} />
+          <p>{article.firstParagraph}</p>
         </div>
       )
       )}
@@ -39,10 +40,13 @@ query {
           current
       }
       image {
-        asset {
-          id
+          asset {
+            gatsbyImageData
+            source {
+              url
+            }
+          }
         }
-      }
         }
       }
     }

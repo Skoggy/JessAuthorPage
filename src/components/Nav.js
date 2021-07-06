@@ -25,12 +25,14 @@ ul {
     list-style: none;
     font-size: 1.75rem;
     text-decoration: none;
+    
 }
 `
 
 const GridStyles = styled.div`
 display:grid;
 grid-template-columns: 1fr 4fr;
+border: 5px solid red;
 `
 
 
@@ -52,7 +54,7 @@ export default function Nav() {
                         <Link to='/about/'>About</Link>
                     </li>
                     <li>
-                        <Link to='/'>Index</Link>
+                        <Link to='/'>Articles</Link>
                     </li>
                     <li>
                         <Link to='/sale/'>Shop</Link>

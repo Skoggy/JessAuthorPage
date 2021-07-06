@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const LayoutStyles = styled.div`
 display: grid;
-/* grid-template-columns: 1fr; */
+
 
 
 `
@@ -16,7 +16,6 @@ export default function Layout({ children }) {
     <>
       <Header />
       <LayoutStyles>
-
         {children}
       </LayoutStyles>
 
