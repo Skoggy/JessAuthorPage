@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Book from '../components/Book';
 
 
@@ -14,12 +14,15 @@ export default function BooksPage({ data }) {
             <p>This is the page that will list all of the books</p>
             <div>
                 {books.map(book => (
-                    <Book
-                        key={book.id}
-                        title={book.title}
-                        description={book.description}
-                    // linkToBuy={book.}
-                    ></Book>
+                    <div key={book.id}>
+                        <Book
+
+                            title={book.title}
+                            description={book.description}
+                        // linkToBuy={book.}
+                        />
+                        <GatsbyImage image={book.image.asset.gatsbyImageData} alt='' />
+                    </div>
                 ))}
             </div>
         </div>
@@ -28,18 +31,23 @@ export default function BooksPage({ data }) {
 }
 
 export const query = graphql`
-query {
-    allSanityBook {
-    totalCount
+                query {
+                    allSanityBook {
+                    totalCount
     nodes {
-      title
+                    title
       id
-      price
-      slug {
-          current
-      }
+                price
+                slug {
+                    current
+                }
+                image {
+                    asset {
+                    gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+          }
+        }
     }
   }
 }
 
-`
+                `

@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-// import Article from '../components/Article';
 import { GatsbyImage } from 'gatsby-plugin-image'
-// import { StaticImage } from "gatsby-plugin-image"
+
 
 // import Layout from "../components/layout"
 // import SEO from "../components/seo"
